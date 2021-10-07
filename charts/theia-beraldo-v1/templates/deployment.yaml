@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: theia-beraldo
+  namespace: theia-beraldo-v1
   name: depl-theia-beraldo
   labels:
     app: theia
