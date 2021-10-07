@@ -9,13 +9,12 @@ spec:
   selector:
     matchLabels:
       app: theia
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       labels:
         app: theia
     spec:
-      replicas: {{ .Values.replicaCount }}
       securityContext:
         runAsUser: 1001
         fsGroup: 1001
