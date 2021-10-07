@@ -4,7 +4,7 @@
 
 replicaCount: 1
 
-namespace: beraldo
+namespace: theia-beraldo
 
 image:
   repository: nginx
