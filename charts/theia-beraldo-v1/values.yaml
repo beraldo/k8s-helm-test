@@ -1,20 +1,14 @@
-# Default values for theia-beraldo-v2.
+# Default values for theia-beraldo-v1.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-
-namespace: theia-beraldo
 
 replicaCount: 1
 
 image:
-  repository: theiaide/theia
+  repository: nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.0.0"
-
-deployment:
-  name: dpl-theia-beraldo
-
+  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""
@@ -43,15 +37,11 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  name: srv-theia-beraldo
+  type: ClusterIP
   port: 80
-  targetPort: 3000
-
 
 ingress:
-  enabled: true
-  name: ingress-theia-beraldo
-  host: theia.beraldo.jacstack.jacexperts.io
+  enabled: false
   className: ""
   annotations: {}
     # kubernetes.io/ingress.class: nginx

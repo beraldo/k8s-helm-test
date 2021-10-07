@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: {{ .Values.namespace }}
-  name: theia-beraldo
+  namespace: theia-beraldo
+  name: depl-theia-beraldo
   labels:
     app: theia
 spec:
@@ -21,7 +21,7 @@ spec:
       volumes:
       - name: volume-theia-beraldo
         persistentVolumeClaim:
-          claimName: volume-theia-beraldo
+           claimName: volume-theia-beraldo
       containers:
       - image: theiaide/theia:1.0.0
         name: theia
@@ -30,3 +30,4 @@ spec:
         volumeMounts:
         - mountPath: /home/project
           name: volume-theia-beraldo
+

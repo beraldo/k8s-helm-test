@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: entrada-theia
-  namespace: {{ .Values.namespace }}
+  name: ingress-theia
+  namespace: theia-beraldo
 spec:
   rules:
   - host: theia.beraldo.jacstack.jacexperts.io
