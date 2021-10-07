@@ -36,6 +36,11 @@ securityContext:
   runAsNonRoot: true
   runAsUser: 1001
 
+volume:
+  name: volume-theia-beraldo
+  size: 1Gi
+  mountPoint: /home/project
+
 service:
   type: ClusterIP
   port: 80
